@@ -1,184 +1,152 @@
 import fs from "fs";
 
-const USER_AGENT = "ruya-tabirleri-rss/1.0";
-
-const SITE = "https://www.diyadinnet.com";
-
 const RSS_URL =
 "https://gizlivadinet-creator.github.io/tarihte-bugun/ruya-tabirleri.xml";
 
+const BASE =
+"https://www.diyadinnet.com";
+
+const USER_AGENT =
+"ruya-tabirleri-rss/1.0";
 
 
-function cdata(text=""){
+function temiz(text="") {
 
 return text
-.replace(/]]>/g,"]]]]><![CDATA[>");
-
-}
-
-
-
-function temizle(html=""){
-
-return html
-
 .replace(/<script[\s\S]*?<\/script>/gi,"")
 .replace(/<style[\s\S]*?<\/style>/gi,"")
-.replace(/<nav[\s\S]*?<\/nav>/gi,"")
-.replace(/<header[\s\S]*?<\/header>/gi,"")
-.replace(/<footer[\s\S]*?<\/footer>/gi,"")
-.replace(/<form[\s\S]*?<\/form>/gi,"")
-
-.replace(
-/<img[^>]*(logo|d\/logo|logo\.svg)[^>]*>/gi,
-""
-)
-
+.replace(/<!--[\s\S]*?-->/g,"")
 .trim();
 
 }
 
 
 
+function xml(text=""){
 
-async function sayfaAl(url){
+return text
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;");
 
-try{
+}
 
 
-const res =
-await fetch(url,{
+
+
+async function sayfaCek(url){
+
+const res = await fetch(url,{
 headers:{
 "User-Agent":USER_AGENT
 }
 });
 
-
-const html =
-await res.text();
-
-
-
-let baslik =
-html.match(
-/<h1[^>]*>([\s\S]*?)<\/h1>/i
-)?.[1]
-||
-"";
-
-
-baslik =
-baslik
-.replace(/<[^>]+>/g,"")
-.replace(/\s+/g," ")
-.trim();
-
-
-
-let icerik =
-
-html.match(
-/<article[^>]*>([\s\S]*?)<\/article>/i
-)?.[1]
-
-||
-
-html.match(
-/<div[^>]+class=["'][^"']*(article|content|detail)[^"']*["'][^>]*>([\s\S]*?)<\/div>/i
-)?.[2]
-
-||
-
-"";
-
-
-
-icerik =
-temizle(icerik);
-
-
-
-if(
-icerik.length < 300
-)
-return null;
-
-
-
-let resim="";
-
-
-const img =
-icerik.match(
-/<img[^>]+src=["']([^"']+)["']/i
-);
-
-
-if(img){
-
-resim =
-img[1].startsWith("http")
-?
-img[1]
-:
-SITE + img[1];
+return await res.text();
 
 }
 
 
 
-let video="";
+
+function baslikBul(html){
+
+let m =
+html.match(
+/<h1[^>]*>(.*?)<\/h1>/is
+);
+
+return m ?
+m[1].replace(/<[^>]+>/g,"").trim()
+:
+"Rüya Yorumu";
+
+}
 
 
-const iframe =
-icerik.match(
+
+
+function gorselBul(html){
+
+let m =
+html.match(
+/<img[^>]+src=["']([^"']+)["']/i
+);
+
+if(!m) return "";
+
+if(m[1].startsWith("/"))
+return BASE+m[1];
+
+return m[1];
+
+}
+
+
+
+
+function makaleBul(html){
+
+
+let m =
+html.match(
+/<div[^>]*class=["'][^"']*article-text[^"']*["'][^>]*>([\s\S]*?)<\/div>\s*<\/div>/i
+);
+
+
+if(!m)
+return "";
+
+
+let content=m[1];
+
+
+// gereksizleri kaldır
+
+content =
+content
+.replace(/<a[^>]*>/gi,"")
+.replace(/<\/a>/gi,"")
+.replace(/<svg[\s\S]*?<\/svg>/gi,"")
+.replace(/<i[\s\S]*?<\/i>/gi,"")
+.replace(/style="[^"]*"/gi,"")
+.replace(/class="[^"]*"/gi,"");
+
+
+
+// sadece izin verilen taglar
+
+content =
+content.replace(
+/<(?!\/?(p|h2|h3|strong|br)\b)[^>]+>/gi,
+""
+);
+
+
+return content.trim();
+
+}
+
+
+
+
+function videoBul(html){
+
+let m =
+html.match(
 /<iframe[^>]+src=["']([^"']+)["']/i
 );
 
 
-if(iframe){
-
-video=iframe[1];
-
-}
+if(!m)
+return "";
 
 
-
-// içerikteki medya tekrarlarını kaldır
-
-icerik =
-icerik.replace(
-/<img[^>]*>/gi,
-""
-);
-
-
-icerik =
-icerik.replace(
-/<iframe[\s\S]*?<\/iframe>/gi,
-""
-);
-
-
-
-return {
-
-baslik,
-icerik,
-resim,
-video,
-url
-
-};
-
-
-}
-
-catch{
-
-return null;
-
-}
+return `
+<br>
+<h2>Video</h2>
+<iframe src="${m[1]}" frameborder="0" allowfullscreen></iframe>
+`;
 
 }
 
@@ -186,114 +154,69 @@ return null;
 
 
 
-async function main(){
+async function rssOlustur(){
 
 
-try{
+let liste = [
 
+"https://www.diyadinnet.com/Ruya-Tabirleri"
 
-const ana =
-await fetch(
-SITE+"/Ruya-Tabirleri",
-{
-headers:{
-"User-Agent":USER_AGENT
-}
-});
-
-
-const html =
-await ana.text();
-
-
-
-const linkler =
-
-[
-...html.matchAll(
-/href=["']([^"']*ruyada-[^"']*)["']/gi
-)
-
-]
-
-.map(x=>x[1])
-
-.map(x=>
-
-x.startsWith("http")
-?
-x
-:
-SITE+x
-
-);
-
-
-
-const urls =
-[...new Set(linkler)];
+];
 
 
 
 let items="";
 
-let adet=0;
+
+for(const url of liste){
+
+
+let html =
+await sayfaCek(url);
 
 
 
-for(const url of urls){
-
-
-const veri =
-await sayfaAl(url);
-
-
-
-if(!veri)
-continue;
-
-
-
-if(
-!veri.url.includes("ruyada-")
+let linkler =
+[
+...html.matchAll(
+/href=["']([^"']*ruyada-[^"']*)["']/gi
 )
-continue;
+]
+.map(x=>x[1])
+.filter(
+x=>x.startsWith("/")
+)
+.map(
+x=>BASE+x
+);
 
 
 
-let makale="";
+for(const link of [...new Set(linkler)]){
+
+
+let sayfa =
+await sayfaCek(link);
 
 
 
-// görsel en başta
-
-if(veri.resim){
-
-makale +=
-
-`<img src="${veri.resim}" /><br/><br/>`;
-
-}
+let baslik =
+baslikBul(sayfa);
 
 
 
-// tam içerik
-
-makale += veri.icerik;
-
+let resim =
+gorselBul(sayfa);
 
 
-// video en sonda
 
-if(veri.video){
+let makale =
+makaleBul(sayfa);
 
-makale +=
 
-`<br/><br/>
-<iframe src="${veri.video}">
-</iframe>`;
 
-}
+let video =
+videoBul(sayfa);
 
 
 
@@ -302,27 +225,44 @@ items += `
 <item>
 
 <title><![CDATA[
-${cdata(veri.baslik)}
+${baslik}
 ]]></title>
 
 
 <description><![CDATA[
-${cdata(veri.icerik.substring(0,1000))}
+${baslik}
 ]]></description>
 
 
 <content:encoded><![CDATA[
-${cdata(makale)}
+
+${resim ?
+`<img src="${resim}" />`
+:""}
+
+
+<h1>
+${baslik}
+</h1>
+
+
+${makale}
+
+
+${video}
+
+
 ]]></content:encoded>
 
 
+
 <link>
-${veri.url}
+${link}
 </link>
 
 
 <guid>
-${veri.url}
+${link}
 </guid>
 
 
@@ -331,79 +271,45 @@ Rüya Yorumları
 </category>
 
 
-<dc:creator>
-Diyadinnet
-</dc:creator>
-
-
 <pubDate>
 ${new Date().toUTCString()}
 </pubDate>
-
-
-${
-veri.resim
-?
-`
-<media:content 
-url="${veri.resim}"
-medium="image"/>
-`
-:
-""
-}
 
 
 </item>
 
 `;
 
+}
 
-
-adet++;
-
-
-
-if(adet>=100)
-break;
 
 
 }
 
 
 
-
-
-const rss =
-
-`<?xml version="1.0" encoding="UTF-8"?>
+let rss = `<?xml version="1.0" encoding="UTF-8"?>
 
 <rss version="2.0"
-
-xmlns:atom="http://www.w3.org/2005/Atom"
-
 xmlns:content="http://purl.org/rss/1.0/modules/content/"
-
-xmlns:media="http://search.yahoo.com/mrss/"
-
-xmlns:dc="http://purl.org/dc/elements/1.1/">
+xmlns:atom="http://www.w3.org/2005/Atom">
 
 
 <channel>
 
 
 <title>
-Diyadinnet Rüya Yorumları
+Rüya Tabirleri RSS
 </title>
 
 
 <link>
-${SITE}/Ruya-Tabirleri
+${BASE}/Ruya-Tabirleri
 </link>
 
 
 <description>
-Rüya Yorumları ve anlamları
+Rüya Yorumları
 </description>
 
 
@@ -412,7 +318,7 @@ tr-TR
 </language>
 
 
-<atom:link 
+<atom:link
 href="${RSS_URL}"
 rel="self"
 type="application/rss+xml"/>
@@ -423,13 +329,14 @@ ${new Date().toUTCString()}
 </lastBuildDate>
 
 
+
 ${items}
+
 
 
 </channel>
 
 </rss>`;
-
 
 
 
@@ -441,29 +348,10 @@ rss,
 
 
 
-console.log(
-"✅ RSS oluşturuldu:",
-adet
-);
-
-
-
-}
-
-catch(error){
-
-console.error(
-"❌ HATA:",
-error
-);
-
-process.exit(1);
-
-}
-
+console.log("✅ Rüya RSS hazır");
 
 }
 
 
 
-main();
+rssOlustur();
