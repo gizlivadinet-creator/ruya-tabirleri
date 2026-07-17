@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <rss version="2.0"
+
 xmlns:content="http://purl.org/rss/1.0/modules/content/"
+
 xmlns:atom="http://www.w3.org/2005/Atom">
 
 
@@ -29,13 +32,17 @@ tr-TR
 
 
 <atom:link
-href="https://gizlivadinet-creator.github.io/tarihte-bugun/ruya-tabirleri.xml"
+
+href="https://gizlivadinet-creator.github.io/ruya-tabirleri/ruya-tabirleri.xml"
+
 rel="self"
+
 type="application/rss+xml"/>
 
 
+
 <lastBuildDate>
-Fri, 17 Jul 2026 23:38:35 GMT
+Fri, 17 Jul 2026 23:45:54 GMT
 </lastBuildDate>
 
 
@@ -45,5 +52,6 @@ Fri, 17 Jul 2026 23:38:35 GMT
 
 
 </channel>
+
 
 </rss>
