@@ -2,11 +2,16 @@ import fs from "fs";
 import * as cheerio from "cheerio";
 
 
-const USER_AGENT = "ruya-yorumlari-rss/1.0";
+const USER_AGENT = "ruya-rss/1.0";
 
 
-const SITE_URL =
+const BASE =
+"https://www.diyadinnet.com";
+
+
+const START_URL =
 "https://www.diyadinnet.com/Ruya-Tabirleri";
+
 
 
 const RSS_URL =
@@ -14,87 +19,121 @@ const RSS_URL =
 
 
 
-function temizle(text = "") {
+
+
+function temiz(text=""){
 
 return text
-.replace(/\s+/g, " ")
+.replace(/\s+/g," ")
 .trim();
 
 }
 
 
 
-async function sayfaCek(url) {
 
-const response = await fetch(url,{
+
+
+async function fetchHTML(url){
+
+const res = await fetch(url,{
 headers:{
 "User-Agent":USER_AGENT
 }
 });
 
 
-if(!response.ok){
+if(!res.ok){
 
-throw new Error(`HTTP ${response.status}`);
-
-}
-
-
-return await response.text();
+throw new Error(res.status);
 
 }
 
 
+return await res.text();
+
+}
 
 
 
-async function ruyaLinkleriAl(){
+
+
+
+
+async function linkleriBul(){
 
 
 const html =
-await sayfaCek(SITE_URL);
+await fetchHTML(START_URL);
 
 
 const $ =
 cheerio.load(html);
 
 
-let liste = [];
+
+let links=[];
 
 
 
 $("a").each((i,el)=>{
 
 
-let baslik =
-temizle($(el).text());
+let title =
+temiz($(el).text());
 
 
-let link =
+let href =
 $(el).attr("href");
 
 
 
-if(!baslik || !link){
-
+if(!href || !title)
 return;
 
+
+
+
+if(href.startsWith("/")){
+
+href =
+BASE + href;
+
 }
+
 
 
 
 let kontrol =
-(baslik + " " + link).toLowerCase();
+href.toLowerCase();
 
 
 
-// Sadece rüya içerikleri
+
+
+// sadece gerçek rüya sayfaları
 
 if(
 
-!kontrol.includes("ruya") &&
+kontrol.includes("ruyada") ||
 
-!kontrol.includes("rüya")
+kontrol.includes("ruya-")
+
+){
+
+
+
+// yasaklar
+
+if(
+
+kontrol.includes("ruya-tabirleri") ||
+
+kontrol.includes("haber") ||
+
+kontrol.includes("iletisim") ||
+
+kontrol.includes("kunye")
 
 ){
 
@@ -104,68 +143,26 @@ return;
 
 
 
+links.push({
 
-// Yasaklar
+title,
 
-const yasaklar=[
-
-"kunye",
-"künye",
-"iletisim",
-"iletişim",
-"gizlilik",
-"çerez",
-"haber",
-"video",
-"galeri",
-"fotoğraf"
-
-];
-
-
-
-if(
-yasaklar.some(x =>
-kontrol.includes(x)
-)
-){
-
-return;
-
-}
-
-
-
-if(link.startsWith("/")){
-
-link =
-"https://www.diyadinnet.com"+link;
-
-}
-
-
-
-if(
-!liste.some(x=>x.url===link)
-){
-
-liste.push({
-
-title:baslik,
-
-url:link
+url:href
 
 });
 
 }
 
 
-
 });
 
 
 
-return liste;
+
+
+return [...new Map(
+links.map(x=>[x.url,x])
+).values()];
 
 }
 
@@ -177,14 +174,14 @@ return liste;
 
 
 
-async function ruyaDetayCek(url){
+async function detay(url){
 
 
 try{
 
 
 const html =
-await sayfaCek(url);
+await fetchHTML(url);
 
 
 const $ =
@@ -192,10 +189,21 @@ cheerio.load(html);
 
 
 
+
+// gereksizleri kaldır
+
+$("script,style,nav,header,footer,iframe,.menu,.logo,.ads,.advert").remove();
+
+
+
+
+
 let title =
-temizle(
+temiz(
 $("h1").first().text()
 );
+
+
 
 
 
@@ -203,10 +211,14 @@ let image="";
 
 
 
-$("img").each((i,el)=>{
+// içerik içindeki ilk gerçek resim
+
+$("article img,.content img,.detail img,img").each((i,el)=>{
 
 
-if(!image){
+if(image)
+return;
+
 
 
 let src =
@@ -215,30 +227,35 @@ $(el).attr("data-src");
 
 
 
-if(src){
+if(!src)
+return;
 
 
-if(src.startsWith("//")){
 
-src="https:"+src;
+if(
+src.includes("logo") ||
+src.includes("icon")
+){
+
+return;
 
 }
+
+
 
 
 if(src.startsWith("/")){
 
 src =
-"https://www.diyadinnet.com"+src;
+BASE+src;
 
 }
+
 
 
 image=src;
 
-}
 
-
-}
 
 });
 
@@ -251,8 +268,9 @@ let content="";
 
 
 
-$("article, main, .content, .detail, .entry-content")
-.each((i,el)=>{
+// sadece yazı alanları
+
+$("article,.detail,.entry-content,.content").each((i,el)=>{
 
 
 content +=
@@ -263,8 +281,25 @@ content +=
 
 
 
+
+
 content =
-temizle(content);
+temiz(content);
+
+
+
+
+
+
+// gereksiz başlangıç temizliği
+
+content =
+content
+.replace(/ANA SAYFA.*?Rüya Tabirleri/gi,"")
+.replace(/Trend Haberler.*$/gi,"")
+.replace(/document\.addEventListener.*$/gi,"");
+
+
 
 
 
@@ -274,8 +309,7 @@ let video="";
 
 
 
-$("iframe, video source")
-.each((i,el)=>{
+$("video source, iframe").each((i,el)=>{
 
 
 if(!video){
@@ -285,8 +319,8 @@ $(el).attr("src") || "";
 
 }
 
-});
 
+});
 
 
 
@@ -310,23 +344,10 @@ url
 
 
 }
+catch(e){
 
-catch{
 
-
-return {
-
-title:"",
-
-content:"",
-
-image:"",
-
-video:"",
-
-url
-
-};
+return null;
 
 
 }
@@ -345,16 +366,14 @@ url
 async function main(){
 
 
-try{
-
-
 const now =
 new Date();
 
 
 
-const liste =
-await ruyaLinkleriAl();
+const links =
+await linkleriBul();
+
 
 
 
@@ -362,65 +381,73 @@ let items="";
 
 
 
-for(const item of liste){
-
-
-const detay =
-await ruyaDetayCek(item.url);
+let sayac=0;
 
 
 
-if(!detay.content){
+for(const link of links){
 
+
+const data =
+await detay(link.url);
+
+
+
+if(!data)
 continue;
 
+
+
+if(data.content.length < 100)
+continue;
+
+
+
+
+let html="";
+
+
+
+// görsel başta
+
+if(data.image){
+
+
+html +=
+
+`<p><img src="${data.image}" /></p>`;
+
 }
 
 
 
-let aciklama="";
+
+
+html += data.content;
 
 
 
-// Görsel başta
-
-if(detay.image){
-
-aciklama +=
-
-`<img src="${detay.image}" /><br/><br/>`;
-
-}
 
 
+// video en sonda
 
-// Tam içerik
-
-aciklama +=
-detay.content;
+if(data.video){
 
 
-
-// Video sonda
-
-if(detay.video){
-
-aciklama +=
+html +=
 
 `
 
-<br/><br/>
-
+<p>
 Video:
-
-<a href="${detay.video}">
+<a href="${data.video}">
 İzle
 </a>
+</p>
 
 `;
 
 }
-
 
 
 
@@ -432,31 +459,31 @@ items += `
 
 
 <title><![CDATA[
-${detay.title}
+${data.title}
 ]]></title>
 
 
 
 <description><![CDATA[
-${aciklama}
+${html}
 ]]></description>
 
 
 
 <content:encoded><![CDATA[
-${aciklama}
+${html}
 ]]></content:encoded>
 
 
 
 <link>
-${detay.url}
+${data.url}
 </link>
 
 
 
-<guid isPermaLink="true">
-${detay.url}
+<guid>
+${data.url}
 </guid>
 
 
@@ -479,15 +506,11 @@ ${now.toUTCString()}
 
 
 
-${detay.image ? `
+${data.image ?
 
-<media:content
+`<media:content url="${data.image}" medium="image"/>`
 
-url="${detay.image}"
-
-medium="image"/>
-
-`:""}
+:""}
 
 
 
@@ -497,10 +520,11 @@ medium="image"/>
 
 
 
+sayac++;
+
+
+
 }
-
-
-
 
 
 
@@ -512,16 +536,14 @@ const rss =
 
 <rss version="2.0"
 
-xmlns:media="http://search.yahoo.com/mrss/"
-
 xmlns:content="http://purl.org/rss/1.0/modules/content/"
+
+xmlns:media="http://search.yahoo.com/mrss/"
 
 xmlns:dc="http://purl.org/dc/elements/1.1/">
 
 
-
 <channel>
-
 
 
 <title>
@@ -529,17 +551,14 @@ Diyadinnet Rüya Yorumları
 </title>
 
 
-
 <link>
-${SITE_URL}
+${START_URL}
 </link>
 
 
-
 <description>
-Diyadinnet kaynaklı rüya yorumları
+Dini ve geleneksel rüya yorumları
 </description>
-
 
 
 <language>
@@ -547,21 +566,18 @@ tr-TR
 </language>
 
 
-
 <lastBuildDate>
 ${now.toUTCString()}
 </lastBuildDate>
 
 
-
 ${items}
-
 
 
 </channel>
 
-
 </rss>`;
+
 
 
 
@@ -579,32 +595,11 @@ rss,
 
 
 
-
-
 console.log(
-
-`✅ RSS hazır. ${liste.length} rüya bulundu`
-
+"✅ RSS hazır:",
+sayac,
+"rüya"
 );
-
-
-
-}
-
-
-
-catch(error){
-
-
-console.error(
-"❌ HATA:",
-error
-);
-
-
-process.exit(1);
-
-}
 
 
 }
