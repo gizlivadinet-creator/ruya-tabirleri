@@ -1,339 +1,136 @@
 import fs from "fs";
-import * as cheerio from "cheerio";
 
+const USER_AGENT = "ruya-tabirleri-rss/1.0";
 
-const USER_AGENT = "ruya-rss/1.0";
-
-
-const BASE =
+const SITE =
 "https://www.diyadinnet.com";
-
-
-const START_URL =
-"https://www.diyadinnet.com/Ruya-Tabirleri";
-
-
 
 const RSS_URL =
 "https://gizlivadinet-creator.github.io/tarihte-bugun/ruya-tabirleri.xml";
 
 
+function temizle(html="") {
 
-
-
-function temiz(text=""){
-
-return text
-.replace(/\s+/g," ")
+return html
+.replace(/<script[\s\S]*?<\/script>/gi,"")
+.replace(/<style[\s\S]*?<\/style>/gi,"")
+.replace(/<nav[\s\S]*?<\/nav>/gi,"")
+.replace(/<header[\s\S]*?<\/header>/gi,"")
+.replace(/<footer[\s\S]*?<\/footer>/gi,"")
+.replace(/<form[\s\S]*?<\/form>/gi,"")
+.replace(/cookieChoices[\s\S]*?;/gi,"")
+.replace(/<img[^>]*logo[^>]*>/gi,"")
+.replace(/<img[^>]*d\.svg[^>]*>/gi,"")
 .trim();
 
 }
 
 
 
+function xml(text=""){
+
+return text
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;");
+
+}
 
 
 
-async function fetchHTML(url){
+async function cekSayfa(url){
 
-const res = await fetch(url,{
+try{
+
+
+const res =
+await fetch(url,{
 headers:{
 "User-Agent":USER_AGENT
 }
 });
 
 
-if(!res.ok){
-
-throw new Error(res.status);
-
-}
-
-
-return await res.text();
-
-}
-
-
-
-
-
-
-
-async function linkleriBul(){
-
-
 const html =
-await fetchHTML(START_URL);
+await res.text();
 
 
-const $ =
-cheerio.load(html);
 
+let baslik =
+html.match(/<title>(.*?)<\/title>/is)?.[1] || "";
 
 
-let links=[];
 
+baslik =
+baslik
+.replace(/Diyadinnet.*/i,"")
+.trim();
 
 
-$("a").each((i,el)=>{
 
+let icerik =
+html.match(
+/<article[\s\S]*?<\/article>/i
+)?.[0]
+||
+html.match(
+/<main[\s\S]*?<\/main>/i
+)?.[0]
+||
+"";
 
-let title =
-temiz($(el).text());
 
 
-let href =
-$(el).attr("href");
+icerik =
+temizle(icerik);
 
 
 
-if(!href || !title)
-return;
+let resim="";
 
-
-
-
-if(href.startsWith("/")){
-
-href =
-BASE + href;
-
-}
-
-
-
-
-let kontrol =
-href.toLowerCase();
-
-
-
-
-
-// sadece gerçek rüya sayfaları
-
-if(
-
-kontrol.includes("ruyada") ||
-
-kontrol.includes("ruya-")
-
-){
-
-
-
-// yasaklar
-
-if(
-
-kontrol.includes("ruya-tabirleri") ||
-
-kontrol.includes("haber") ||
-
-kontrol.includes("iletisim") ||
-
-kontrol.includes("kunye")
-
-){
-
-return;
-
-}
-
-
-
-links.push({
-
-title,
-
-url:href
-
-});
-
-}
-
-
-});
-
-
-
-
-
-return [...new Map(
-links.map(x=>[x.url,x])
-).values()];
-
-}
-
-
-
-
-
-
-
-
-
-async function detay(url){
-
-
-try{
-
-
-const html =
-await fetchHTML(url);
-
-
-const $ =
-cheerio.load(html);
-
-
-
-
-// gereksizleri kaldır
-
-$("script,style,nav,header,footer,iframe,.menu,.logo,.ads,.advert").remove();
-
-
-
-
-
-let title =
-temiz(
-$("h1").first().text()
+const img =
+icerik.match(
+/<img[^>]+src=["']([^"']+)["']/i
 );
 
 
+if(img){
 
-
-
-let image="";
-
-
-
-// içerik içindeki ilk gerçek resim
-
-$("article img,.content img,.detail img,img").each((i,el)=>{
-
-
-if(image)
-return;
-
-
-
-let src =
-$(el).attr("src") ||
-$(el).attr("data-src");
-
-
-
-if(!src)
-return;
-
-
-
-if(
-src.includes("logo") ||
-src.includes("icon")
-){
-
-return;
+resim =
+img[1].startsWith("http")
+?
+img[1]
+:
+SITE+img[1];
 
 }
-
-
-
-
-if(src.startsWith("/")){
-
-src =
-BASE+src;
-
-}
-
-
-
-image=src;
-
-
-
-});
-
-
-
-
-
-
-let content="";
-
-
-
-// sadece yazı alanları
-
-$("article,.detail,.entry-content,.content").each((i,el)=>{
-
-
-content +=
-" "+$(el).text();
-
-
-});
-
-
-
-
-
-content =
-temiz(content);
-
-
-
-
-
-
-// gereksiz başlangıç temizliği
-
-content =
-content
-.replace(/ANA SAYFA.*?Rüya Tabirleri/gi,"")
-.replace(/Trend Haberler.*$/gi,"")
-.replace(/document\.addEventListener.*$/gi,"");
-
-
-
-
 
 
 
 let video="";
 
 
+const vid =
+icerik.match(
+/<iframe[^>]+src=["']([^"']+)["']/i
+);
 
-$("video source, iframe").each((i,el)=>{
 
+if(vid){
 
-if(!video){
-
-video =
-$(el).attr("src") || "";
+video=vid[1];
 
 }
-
-
-});
-
-
 
 
 
 return {
 
-title:
-title || "Rüya Yorumu",
+baslik,
 
-content,
+icerik,
 
-image,
+resim,
 
 video,
 
@@ -342,23 +139,14 @@ url
 };
 
 
-
 }
-catch(e){
-
+catch{
 
 return null;
 
-
 }
 
-
 }
-
-
-
-
-
 
 
 
@@ -366,90 +154,113 @@ return null;
 async function main(){
 
 
-const now =
-new Date();
+try{
+
+
+const ana =
+await fetch(
+SITE+"/Ruya-Tabirleri",
+{
+headers:{
+"User-Agent":USER_AGENT
+}
+});
+
+
+const html =
+await ana.text();
 
 
 
-const links =
-await linkleriBul();
+const linkler =
+[...html.matchAll(
+/href=["']([^"']*ruyada-[^"']*)["']/gi
+)]
+.map(x=>x[1]);
 
+
+
+const benzersiz =
+[
+...new Set(
+linkler.map(x=>
+x.startsWith("http")
+?
+x
+:
+SITE+x
+)
+)
+];
 
 
 
 let items="";
 
 
-
 let sayac=0;
 
 
 
-for(const link of links){
+for(const link of benzersiz){
 
 
-const data =
-await detay(link.url);
+if(sayac>=100)
+break;
 
 
 
-if(!data)
+const veri =
+await cekSayfa(link);
+
+
+
+if(!veri)
 continue;
 
 
 
-if(data.content.length < 100)
+if(
+!veri.baslik ||
+!veri.icerik
+)
 continue;
 
 
 
-
-let html="";
-
-
-
-// görsel başta
-
-if(data.image){
+if(
+!veri.url.includes("ruyada-")
+)
+continue;
 
 
-html +=
 
-`<p><img src="${data.image}" /></p>`;
+let icerik="";
+
+
+// görsel en başta
+
+if(veri.resim){
+
+icerik +=
+`<img src="${veri.resim}" /><br/><br/>`;
 
 }
 
 
+// içerik
 
-
-
-html += data.content;
-
-
-
+icerik += veri.icerik;
 
 
 // video en sonda
 
-if(data.video){
+if(veri.video){
 
-
-html +=
-
-`
-
-<p>
-Video:
-<a href="${data.video}">
-İzle
-</a>
-</p>
-
-`;
+icerik +=
+`<br/><br/><iframe src="${veri.video}"></iframe>`;
 
 }
-
-
 
 
 
@@ -457,35 +268,29 @@ items += `
 
 <item>
 
-
 <title><![CDATA[
-${data.title}
+${veri.baslik}
 ]]></title>
 
 
-
 <description><![CDATA[
-${html}
+${veri.icerik}
 ]]></description>
 
 
-
 <content:encoded><![CDATA[
-${html}
+${icerik}
 ]]></content:encoded>
 
 
-
 <link>
-${data.url}
+${veri.url}
 </link>
 
 
-
 <guid>
-${data.url}
+${veri.url}
 </guid>
-
 
 
 <category>
@@ -493,25 +298,25 @@ Rüya Yorumları
 </category>
 
 
-
 <dc:creator>
 Diyadinnet
 </dc:creator>
 
 
-
 <pubDate>
-${now.toUTCString()}
+${new Date().toUTCString()}
 </pubDate>
 
 
 
-${data.image ?
-
-`<media:content url="${data.image}" medium="image"/>`
-
-:""}
-
+${veri.resim ?
+`
+<media:content 
+url="${veri.resim}"
+medium="image"/>
+`
+:
+""}
 
 
 </item>
@@ -523,16 +328,11 @@ ${data.image ?
 sayac++;
 
 
-
 }
 
 
 
-
-
-const rss =
-
-`<?xml version="1.0" encoding="UTF-8"?>
+const rss = `<?xml version="1.0" encoding="UTF-8"?>
 
 <rss version="2.0"
 
@@ -547,17 +347,17 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 
 
 <title>
-Diyadinnet Rüya Yorumları
+Diyadinnet Rüya Tabirleri
 </title>
 
 
 <link>
-${START_URL}
+${SITE}/Ruya-Tabirleri
 </link>
 
 
 <description>
-Dini ve geleneksel rüya yorumları
+Rüya Yorumları ve anlamları
 </description>
 
 
@@ -566,9 +366,10 @@ tr-TR
 </language>
 
 
-<lastBuildDate>
-${now.toUTCString()}
-</lastBuildDate>
+<atom:link 
+href="${RSS_URL}"
+rel="self"
+type="application/rss+xml"/>
 
 
 ${items}
@@ -580,30 +381,31 @@ ${items}
 
 
 
-
-
-
 fs.writeFileSync(
-
 "ruya-tabirleri.xml",
-
 rss,
-
 "utf8"
-
 );
 
 
 
 console.log(
-"✅ RSS hazır:",
-sayac,
-"rüya"
+"✅ Rüya RSS oluşturuldu:",
+sayac
 );
 
 
+
+}
+catch(e){
+
+console.error(e);
+
+process.exit(1);
+
 }
 
+}
 
 
 
