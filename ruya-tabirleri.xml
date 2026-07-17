@@ -2,6 +2,8 @@
 
 <rss version="2.0"
 
+xmlns:atom="http://www.w3.org/2005/Atom"
+
 xmlns:content="http://purl.org/rss/1.0/modules/content/"
 
 xmlns:media="http://search.yahoo.com/mrss/"
@@ -23,7 +25,7 @@ https://www.diyadinnet.com/Ruya-Tabirleri
 
 
 <description>
-Diyadinnet Rüya Yorumları
+Rüya Yorumları ve anlamları
 </description>
 
 
@@ -36,6 +38,11 @@ tr-TR
 href="https://gizlivadinet-creator.github.io/tarihte-bugun/ruya-tabirleri.xml"
 rel="self"
 type="application/rss+xml"/>
+
+
+<lastBuildDate>
+Fri, 17 Jul 2026 23:26:04 GMT
+</lastBuildDate>
 
 
 
@@ -55,16 +62,22 @@ Rüyada Yılan Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-yilan-gormek-ne-anlama-gelir-563.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-yilan-gormek-ne-anlama-gelir-563.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -343,7 +356,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:26 GMT
+Fri, 17 Jul 2026 23:25:50 GMT
 </pubDate>
 
 
@@ -373,16 +386,22 @@ Rüyada Deprem Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-deprem-gormek-ve-depremi-hissetmek-ne-anlama-gelir-4215.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-deprem-gormek-ve-depremi-hissetmek-ne-anlama-gelir-4215.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -607,7 +626,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:26 GMT
+Fri, 17 Jul 2026 23:25:50 GMT
 </pubDate>
 
 
@@ -637,16 +656,22 @@ Rüyada Hamile Olduğunu Görmek: Anlamı ve Yorumu
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-hamile-oldugunu-gormek-ne-anlama-gelir-5088.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-hamile-oldugunu-gormek-ne-anlama-gelir-5088.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -920,7 +945,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:26 GMT
+Fri, 17 Jul 2026 23:25:51 GMT
 </pubDate>
 
 
@@ -950,16 +975,22 @@ Rüyada Kedi Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-kedi-gormek-ne-anlama-gelir-kedi-ruyasi-yorumu-919.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-kedi-gormek-ne-anlama-gelir-kedi-ruyasi-yorumu-919.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -1481,7 +1512,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:27 GMT
+Fri, 17 Jul 2026 23:25:51 GMT
 </pubDate>
 
 
@@ -1511,16 +1542,22 @@ Rüyada Fare Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-fare-gormek-ne-anlama-gelir-fare-ruyasi-tabiri-1211.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-fare-gormek-ne-anlama-gelir-fare-ruyasi-tabiri-1211.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -1862,7 +1899,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:27 GMT
+Fri, 17 Jul 2026 23:25:51 GMT
 </pubDate>
 
 
@@ -1892,16 +1929,22 @@ Rüyada Kar Görmek
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-kar-gormek-ne-anlama-gelir-5964.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-kar-gormek-ne-anlama-gelir-5964.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -2218,7 +2261,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:27 GMT
+Fri, 17 Jul 2026 23:25:52 GMT
 </pubDate>
 
 
@@ -2248,16 +2291,22 @@ Rüyada Köpek Görmek
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-kopek-gormek-ne-anlama-gelir-neye-isarettir-6449.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-kopek-gormek-ne-anlama-gelir-neye-isarettir-6449.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -2626,7 +2675,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:28 GMT
+Fri, 17 Jul 2026 23:25:52 GMT
 </pubDate>
 
 
@@ -2656,16 +2705,22 @@ Rüyada Eski Sevgiliyi Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-eski-sevgiliyi-gormek-ne-anlama-gelir-1393.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-eski-sevgiliyi-gormek-ne-anlama-gelir-1393.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -2886,7 +2941,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:28 GMT
+Fri, 17 Jul 2026 23:25:52 GMT
 </pubDate>
 
 
@@ -2916,16 +2971,22 @@ Rüyada Bebek Görmek: Anlamı ve Yorumu
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-bebek-gormek-ne-anlama-gelir-121.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-bebek-gormek-ne-anlama-gelir-121.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -3151,7 +3212,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:28 GMT
+Fri, 17 Jul 2026 23:25:53 GMT
 </pubDate>
 
 
@@ -3181,16 +3242,22 @@ Rüyada Balık Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-balik-gormek-ne-anlama-gelir-3447.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-balik-gormek-ne-anlama-gelir-3447.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -3513,7 +3580,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:29 GMT
+Fri, 17 Jul 2026 23:25:53 GMT
 </pubDate>
 
 
@@ -3543,16 +3610,22 @@ Rüyada Ağlamak Ne Demek, Neye Yorumlanır?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-aglamak-agladigini-gormek-ne-anlama-gelir-3000.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-aglamak-agladigini-gormek-ne-anlama-gelir-3000.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -3815,7 +3888,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:29 GMT
+Fri, 17 Jul 2026 23:25:53 GMT
 </pubDate>
 
 
@@ -3845,16 +3918,22 @@ Rüyada Deniz Görmek
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-deniz-gormek-ne-anlama-gelir-4207.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-deniz-gormek-ne-anlama-gelir-4207.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -4130,7 +4209,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:29 GMT
+Fri, 17 Jul 2026 23:25:53 GMT
 </pubDate>
 
 
@@ -4160,16 +4239,22 @@ Rüyada Kar Yağdığını Görmek
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-kar-yagdigini-gormek-ne-anlama-gelir-833.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-kar-yagdigini-gormek-ne-anlama-gelir-833.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -4411,7 +4496,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:30 GMT
+Fri, 17 Jul 2026 23:25:54 GMT
 </pubDate>
 
 
@@ -4441,16 +4526,22 @@ Rüyada Yangın Görmek
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-yangin-gormek-ne-anlama-gelir-neye-isarettir-9984.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-yangin-gormek-ne-anlama-gelir-neye-isarettir-9984.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -4684,7 +4775,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:30 GMT
+Fri, 17 Jul 2026 23:25:54 GMT
 </pubDate>
 
 
@@ -4714,16 +4805,22 @@ Rüyada Araba Sürmek: Anlamı ve Yorumu
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-araba-surmek-ne-anlama-gelir-1508.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-araba-surmek-ne-anlama-gelir-1508.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -4943,7 +5040,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:30 GMT
+Fri, 17 Jul 2026 23:25:54 GMT
 </pubDate>
 
 
@@ -4973,16 +5070,22 @@ Rüyada Para Görmek: Anlamı ve Yorumu
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-gormek-ne-anlama-gelir-10471.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-gormek-ne-anlama-gelir-10471.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -5377,7 +5480,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:30 GMT
+Fri, 17 Jul 2026 23:25:55 GMT
 </pubDate>
 
 
@@ -5407,16 +5510,22 @@ Rüyada Ölmüş Birini Görmek
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-olmus-birini-gormek-nedir-ne-anlama-gelir-1812.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-olmus-birini-gormek-nedir-ne-anlama-gelir-1812.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -5632,7 +5741,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:31 GMT
+Fri, 17 Jul 2026 23:25:55 GMT
 </pubDate>
 
 
@@ -5662,16 +5771,22 @@ Rüyada Kudret helvası Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-kudret-helvasi-yemek-yedigini-gormek-ne-anlama-gelir-6554.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-kudret-helvasi-yemek-yedigini-gormek-ne-anlama-gelir-6554.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -5870,7 +5985,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:31 GMT
+Fri, 17 Jul 2026 23:25:55 GMT
 </pubDate>
 
 
@@ -5900,16 +6015,22 @@ Rüyada Zengin Evde Hizmetçi Olmak, Olduğunu Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-zengin-evde-hizmetci-olmak-oldugunu-gormek-ne-anlama-gelir-3967.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-zengin-evde-hizmetci-olmak-oldugunu-gormek-ne-anlama-gelir-3967.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -6106,7 +6227,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:31 GMT
+Fri, 17 Jul 2026 23:25:56 GMT
 </pubDate>
 
 
@@ -6136,16 +6257,22 @@ Rüyada Hizmetçilik Yapmak, Yaptığını Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-hizmetcilik-yaptigini-gormek-ne-anlama-gelir-evde-ve-is-yerinde-5275.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-hizmetcilik-yaptigini-gormek-ne-anlama-gelir-evde-ve-is-yerinde-5275.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -6347,7 +6474,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:32 GMT
+Fri, 17 Jul 2026 23:25:56 GMT
 </pubDate>
 
 
@@ -6377,16 +6504,22 @@ Rüyada İşportacı Olmak, Olduğunu Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-isportaci-gormek-ne-anlama-gelir-olmak-ve-isportacilik-yapmak-5530.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-isportaci-gormek-ne-anlama-gelir-olmak-ve-isportacilik-yapmak-5530.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -6582,7 +6715,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:32 GMT
+Fri, 17 Jul 2026 23:25:56 GMT
 </pubDate>
 
 
@@ -6612,16 +6745,22 @@ Rüyada Çöpte, Çöpün İçende Para Bulmak, Bulduğunu Görmek Ne Anlama Gel
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-copun-icinde-para-bulmak-ne-anlama-gelir-copte-kagit-ve-bozuk-para-bulmak-3964.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-copun-icinde-para-bulmak-ne-anlama-gelir-copte-kagit-ve-bozuk-para-bulmak-3964.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -6822,7 +6961,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:32 GMT
+Fri, 17 Jul 2026 23:25:56 GMT
 </pubDate>
 
 
@@ -6852,16 +6991,22 @@ Rüyada Parayı Çöpe Atmak, Attığını Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-parayi-cope-atmak-ne-anlama-gelir-kagit-ve-bozuk-para-cope-atmak-3961.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-parayi-cope-atmak-ne-anlama-gelir-kagit-ve-bozuk-para-cope-atmak-3961.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -7057,7 +7202,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:32 GMT
+Fri, 17 Jul 2026 23:25:57 GMT
 </pubDate>
 
 
@@ -7087,16 +7232,22 @@ Rüyada Gözlük Çerçevesi Kırılması Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-gozluk-cercevesi-kirilmasi-gormek-ne-anlama-gelir-yamulmasi-ve-degistirmek-3960.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-gozluk-cercevesi-kirilmasi-gormek-ne-anlama-gelir-yamulmasi-ve-degistirmek-3960.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -7297,7 +7448,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:33 GMT
+Fri, 17 Jul 2026 23:25:57 GMT
 </pubDate>
 
 
@@ -7327,16 +7478,22 @@ Rüyada Boş Fotoğraf Çerçevesi Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-bos-fotograf-cercevesi-gormek-ne-anlama-gelir-kirik-ve-eski-cerceve-3958.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-bos-fotograf-cercevesi-gormek-ne-anlama-gelir-kirik-ve-eski-cerceve-3958.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -7532,7 +7689,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:33 GMT
+Fri, 17 Jul 2026 23:25:57 GMT
 </pubDate>
 
 
@@ -7562,16 +7719,22 @@ Rüyada Kapı Çerçevesi Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-kapi-cercevesi-gormek-ne-anlama-gelir-kirik-ve-eski-kapi-cercevesi-3956.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-kapi-cercevesi-gormek-ne-anlama-gelir-kirik-ve-eski-kapi-cercevesi-3956.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -7767,7 +7930,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:33 GMT
+Fri, 17 Jul 2026 23:25:58 GMT
 </pubDate>
 
 
@@ -7797,16 +7960,22 @@ Rüyada Pencere Çerçevesi Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-pencere-cercevesi-gormek-ne-anlama-gelir-degistirmek-ve-kirilmasi-3954.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-pencere-cercevesi-gormek-ne-anlama-gelir-degistirmek-ve-kirilmasi-3954.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -8009,7 +8178,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:33 GMT
+Fri, 17 Jul 2026 23:25:58 GMT
 </pubDate>
 
 
@@ -8039,16 +8208,22 @@ Rüyada Siftah Parası Vermek, Verdiğini Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-siftah-parasi-vermek-verdigini-gormek-ne-anlama-gelir-siftah-yapmak-ve-almak-3950.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-siftah-parasi-vermek-verdigini-gormek-ne-anlama-gelir-siftah-yapmak-ve-almak-3950.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -8247,7 +8422,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:34 GMT
+Fri, 17 Jul 2026 23:25:58 GMT
 </pubDate>
 
 
@@ -8277,16 +8452,22 @@ Rüyada Rus Parası Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-rus-parasi-gormek-ne-anlama-gelir-rus-rublesi-gormenin-tabiri-3947.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-rus-parasi-gormek-ne-anlama-gelir-rus-rublesi-gormenin-tabiri-3947.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -8481,7 +8662,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:34 GMT
+Fri, 17 Jul 2026 23:25:58 GMT
 </pubDate>
 
 
@@ -8511,16 +8692,22 @@ Rüyada Azeri Parası Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-azeri-parasi-gormek-ne-anlama-gelir-azerbaycan-manati-gormek-3941.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-azeri-parasi-gormek-ne-anlama-gelir-azerbaycan-manati-gormek-3941.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -8716,7 +8903,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:34 GMT
+Fri, 17 Jul 2026 23:25:59 GMT
 </pubDate>
 
 
@@ -8746,16 +8933,22 @@ Rüyada Umre Parası Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-umre-parasi-gormek-ne-anlama-gelir-umre-icin-para-biriktirmek-3936.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-umre-parasi-gormek-ne-anlama-gelir-umre-icin-para-biriktirmek-3936.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -8953,7 +9146,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:34 GMT
+Fri, 17 Jul 2026 23:25:59 GMT
 </pubDate>
 
 
@@ -8983,16 +9176,22 @@ Rüyada Çay Parası Ödemek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-cay-parasi-odemek-ne-anlama-gelir-cay-parasi-vermenin-tabiri-3935.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-cay-parasi-odemek-ne-anlama-gelir-cay-parasi-vermenin-tabiri-3935.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -9187,7 +9386,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:35 GMT
+Fri, 17 Jul 2026 23:25:59 GMT
 </pubDate>
 
 
@@ -9217,16 +9416,22 @@ Rüyada Bizans Parası Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-bizans-parasi-gormek-ne-anlama-gelir-eski-bizans-parasi-bulmak-3933.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-bizans-parasi-gormek-ne-anlama-gelir-eski-bizans-parasi-bulmak-3933.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -9421,7 +9626,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:35 GMT
+Fri, 17 Jul 2026 23:26:00 GMT
 </pubDate>
 
 
@@ -9451,16 +9656,22 @@ Rüyada Hindistan Parası Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-hindistan-parasi-gormek-ne-anlama-gelir-hint-parasi-gormek-3932.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-hindistan-parasi-gormek-ne-anlama-gelir-hint-parasi-gormek-3932.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -9655,7 +9866,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:35 GMT
+Fri, 17 Jul 2026 23:26:00 GMT
 </pubDate>
 
 
@@ -9685,16 +9896,22 @@ Rüyada Para Arayıp Bulamamak Ne Anlama Gelir, Neye İşarettir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-bulamamak-ne-anlama-gelir-para-arayip-bulamamak-ve-cuzdanda-para-bulamamak-3929.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-bulamamak-ne-anlama-gelir-para-arayip-bulamamak-ve-cuzdanda-para-bulamamak-3929.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -9894,7 +10111,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:36 GMT
+Fri, 17 Jul 2026 23:26:00 GMT
 </pubDate>
 
 
@@ -9924,16 +10141,22 @@ Rüyada Yol Parası İstemek Ne Anlama Gelir? Birinden Yol Parası İsteme Anlam
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-yol-parasi-istemek-ne-anlama-gelir-birinden-babadan-ve-anneden-yol-parasi-istemek-3928.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-yol-parasi-istemek-ne-anlama-gelir-birinden-babadan-ve-anneden-yol-parasi-istemek-3928.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -10144,7 +10367,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:36 GMT
+Fri, 17 Jul 2026 23:26:00 GMT
 </pubDate>
 
 
@@ -10174,16 +10397,22 @@ Rüyada Birine Yol Parası Vermek Ne Anlama Gelir? Anlamı ve Yorumu
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-birine-yol-parasi-vermek-ne-anlama-gelir-tanidik-akraba-ve-yolcuya-para-vermek-3923.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-birine-yol-parasi-vermek-ne-anlama-gelir-tanidik-akraba-ve-yolcuya-para-vermek-3923.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -10387,7 +10616,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:36 GMT
+Fri, 17 Jul 2026 23:26:01 GMT
 </pubDate>
 
 
@@ -10417,16 +10646,22 @@ Rüyada Suriye Parası Görmek Ne Anlama Gelir? Rüya Tabiri
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-suriye-parasi-gormek-ne-anlama-gelir-yabanci-para-gormenin-yorumu-3922.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-suriye-parasi-gormek-ne-anlama-gelir-yabanci-para-gormenin-yorumu-3922.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -10620,7 +10855,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:36 GMT
+Fri, 17 Jul 2026 23:26:01 GMT
 </pubDate>
 
 
@@ -10650,16 +10885,22 @@ Rüyada Para Cezası Almak, Yediğini Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-cezasi-almak-ne-anlama-gelir-para-cezasi-yemek-kesilmesi-ve-odemek-3917.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-cezasi-almak-ne-anlama-gelir-para-cezasi-yemek-kesilmesi-ve-odemek-3917.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -10860,7 +11101,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:37 GMT
+Fri, 17 Jul 2026 23:26:01 GMT
 </pubDate>
 
 
@@ -10890,16 +11131,22 @@ Rüyada Ekmek Parası Vermek, Verdiğini Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-ekmek-parasi-vermek-ne-anlama-gelir-istemek-bulamamak-ve-almak-3915.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-ekmek-parasi-vermek-ne-anlama-gelir-istemek-bulamamak-ve-almak-3915.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -11097,7 +11344,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:37 GMT
+Fri, 17 Jul 2026 23:26:02 GMT
 </pubDate>
 
 
@@ -11127,16 +11374,22 @@ Rüyada Para Lastiği Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-lastigi-gormek-ne-anlama-gelir-lastikle-para-baglamak-ve-lastigin-kopmasi-3908.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-lastigi-gormek-ne-anlama-gelir-lastikle-para-baglamak-ve-lastigin-kopmasi-3908.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -11341,7 +11594,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:37 GMT
+Fri, 17 Jul 2026 23:26:02 GMT
 </pubDate>
 
 
@@ -11371,16 +11624,22 @@ Rüyada Para Konuşmak Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-konusmak-ne-anlama-gelir-paradan-bahsetmek-ve-soz-etmek-3906.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-konusmak-ne-anlama-gelir-paradan-bahsetmek-ve-soz-etmek-3906.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -11577,7 +11836,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:37 GMT
+Fri, 17 Jul 2026 23:26:02 GMT
 </pubDate>
 
 
@@ -11607,16 +11866,22 @@ Rüyada Kefen Parası Görmek Ne Anlama Gelir? Kefen Parası Vermek, İstemek ve
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-kefen-parasi-gormek-ne-anlama-gelir-kefen-parasi-vermek-istemek-ve-almanin-tabiri-3904.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-kefen-parasi-gormek-ne-anlama-gelir-kefen-parasi-vermek-istemek-ve-almanin-tabiri-3904.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -11813,7 +12078,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:38 GMT
+Fri, 17 Jul 2026 23:26:03 GMT
 </pubDate>
 
 
@@ -11843,16 +12108,22 @@ Rüyada Hac Parası Görmek Ne Anlama Gelir? Hac Parası Biriktirmek
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-hac-parasi-gormek-ne-anlama-gelir-hac-parasi-biriktirmenin-anlami-3903.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-hac-parasi-gormek-ne-anlama-gelir-hac-parasi-biriktirmenin-anlami-3903.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -12050,7 +12321,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:38 GMT
+Fri, 17 Jul 2026 23:26:03 GMT
 </pubDate>
 
 
@@ -12080,16 +12351,22 @@ Rüyada Uğur Parası Görmek Ne Anlama Gelir? Uğur Parası Almak
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-ugur-parasi-gormek-ne-anlama-gelir-ugur-parasi-almanin-ruya-tabiri-3900.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-ugur-parasi-gormek-ne-anlama-gelir-ugur-parasi-almanin-ruya-tabiri-3900.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -12284,7 +12561,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:38 GMT
+Fri, 17 Jul 2026 23:26:03 GMT
 </pubDate>
 
 
@@ -12314,16 +12591,22 @@ Rüyada Roma Parası Görmek Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-roma-parasi-gormek-ne-anlama-gelir-roma-parasi-bulmak-ve-almak-3899.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-roma-parasi-gormek-ne-anlama-gelir-roma-parasi-bulmak-ve-almak-3899.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -12518,7 +12801,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:38 GMT
+Fri, 17 Jul 2026 23:26:03 GMT
 </pubDate>
 
 
@@ -12548,16 +12831,22 @@ Rüyada Para Çalmak Ne Anlama Gelir?
                title="Anasayfa"
                class="d-inline-flex align-items-center text-decoration-none">
                 <svg aria-hidden="true" width="16" height="16" class="me-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.707 2.293
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                Anasayfa
+            </a>
+        </li>
+
+        <li class="d-inline-flex align-items-center">
+            <a href="https://www.diyadinnet.com/Ruya-Tabirleri"
+               title="Rüya Yorumu"
+               class="d-inline-flex align-items-center text-decoration-none">
+      
 ]]></description>
 
 
 <content:encoded><![CDATA[
-
-<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-calmak-ne-anlama-gelir-kagit-para-dolar-ve-para-caldigini-gormek-490.jpg" />
-
-<br/><br/>
-<div class="my-3 rounded d-flex align-items-start">
+<img src="https://www.diyadinnet.com/d/ruya/ruyada-para-calmak-ne-anlama-gelir-kagit-para-dolar-ve-para-caldigini-gormek-490.jpg" /><br/><br/><div class="my-3 rounded d-flex align-items-start">
     <ul class="list-unstyled d-flex align-items-center gap-2 mb-0 text-sm">
         <li class="d-inline-flex align-items-center">
             <a href="https://www.diyadinnet.com"
@@ -12783,7 +13072,7 @@ Diyadinnet
 
 
 <pubDate>
-Fri, 17 Jul 2026 23:18:39 GMT
+Fri, 17 Jul 2026 23:26:04 GMT
 </pubDate>
 
 
