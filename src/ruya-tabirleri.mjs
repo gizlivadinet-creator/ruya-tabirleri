@@ -5,7 +5,7 @@ import * as cheerio from "cheerio";
 const USER_AGENT = "ruya-tabirleri-rss/1.0";
 
 
-const SITE_URL =
+const ANA_URL =
 "https://www.diyadinnet.com/Ruya-Tabirleri";
 
 
@@ -14,17 +14,13 @@ const RSS_URL =
 
 
 
-async function main(){
+async function sayfaCek(url){
 
-try{
-
-
-const response = await fetch(SITE_URL,{
+const response = await fetch(url,{
 headers:{
 "User-Agent":USER_AGENT
 }
 });
-
 
 if(!response.ok){
 
@@ -32,15 +28,35 @@ throw new Error(`HTTP ${response.status}`);
 
 }
 
+return await response.text();
 
-const html = await response.text();
-
-
-const $ = cheerio.load(html);
+}
 
 
 
-let items = "";
+function temizle(text=""){
+
+return text
+.replace(/\s+/g," ")
+.trim();
+
+}
+
+
+
+
+async function ruyaLinkleriAl(){
+
+
+const html =
+await sayfaCek(ANA_URL);
+
+
+const $ =
+cheerio.load(html);
+
+
+let links=[];
 
 
 
@@ -48,27 +64,197 @@ $("a").each((i,el)=>{
 
 
 const title =
-$(el).text().trim();
+temizle($(el).text());
 
 
-const href =
+let href =
 $(el).attr("href");
 
 
 
+if(!href) return;
+
+
+
 if(
-title &&
-href &&
-title.length > 2
+title.length < 3
+) return;
+
+
+
+if(
+title.includes("Künye") ||
+title.includes("İletişim") ||
+title.includes("Çerez") ||
+title.includes("Gizlilik") ||
+title.includes("Haber")
+){
+
+return;
+
+}
+
+
+
+if(
+href.includes("ruya") ||
+href.includes("ruyada") ||
+href.includes("ruyasi")
 ){
 
 
-const link =
-href.startsWith("http")
-?
-href
-:
+if(
+href.startsWith("/")
+){
+
+href =
 "https://www.diyadinnet.com"+href;
+
+}
+
+
+links.push({
+
+title,
+url:href
+
+});
+
+
+}
+
+
+
+});
+
+
+
+return links;
+
+}
+
+
+
+
+async function ruyaDetayCek(url){
+
+
+try{
+
+
+const html =
+await sayfaCek(url);
+
+
+const $ =
+cheerio.load(html);
+
+
+
+let title =
+temizle(
+$("h1").first().text()
+);
+
+
+
+let content="";
+
+
+
+$("article, .content, .entry-content, .detail").each((i,el)=>{
+
+
+content +=
+" "+
+$(el).text();
+
+
+
+});
+
+
+
+content =
+temizle(content);
+
+
+
+if(!content){
+
+content =
+temizle(
+$("body").text()
+);
+
+}
+
+
+
+return {
+
+title:
+title || "Rüya Tabiri",
+
+content,
+url
+
+};
+
+
+
+}
+
+catch{
+
+
+return {
+
+title:"Rüya Tabiri",
+content:"",
+url
+
+};
+
+
+}
+
+
+}
+
+
+
+
+async function main(){
+
+
+try{
+
+
+const now =
+new Date();
+
+
+
+const links =
+await ruyaLinkleriAl();
+
+
+
+let items="";
+
+
+
+for(const item of links){
+
+
+
+const detay =
+await ruyaDetayCek(item.url);
+
+
+
+if(!detay.content) continue;
 
 
 
@@ -76,24 +262,29 @@ items += `
 
 <item>
 
+
 <title><![CDATA[
-${title}
+${detay.title}
 ]]></title>
 
 
+
 <description><![CDATA[
-${title} rüya tabiri ve anlamı
+${detay.content}
 ]]></description>
 
 
+
 <link>
-${link}
+${detay.url}
 </link>
 
 
+
 <guid>
-${link}
+${detay.url}
 </guid>
+
 
 
 <category>
@@ -101,14 +292,17 @@ Rüya Tabirleri
 </category>
 
 
+
 <dc:creator>
 Diyadinnet
 </dc:creator>
 
 
+
 <pubDate>
-${new Date().toUTCString()}
+${now.toUTCString()}
 </pubDate>
+
 
 
 </item>
@@ -116,9 +310,6 @@ ${new Date().toUTCString()}
 `;
 
 }
-
-
-});
 
 
 
@@ -138,12 +329,12 @@ Diyadinnet Rüya Tabirleri
 
 
 <link>
-${SITE_URL}
+${ANA_URL}
 </link>
 
 
 <description>
-Güncel rüya tabirleri ve anlamları
+Diyadinnet rüya tabirleri tam içerik RSS
 </description>
 
 
@@ -152,7 +343,15 @@ tr-TR
 </language>
 
 
+
+<lastBuildDate>
+${now.toUTCString()}
+</lastBuildDate>
+
+
+
 ${items}
+
 
 
 </channel>
@@ -169,7 +368,10 @@ rss,
 
 
 
-console.log("✅ Rüya RSS oluşturuldu");
+console.log(
+`✅ Rüya RSS oluşturuldu. ${links.length} içerik bulundu`
+);
+
 
 
 }
@@ -177,7 +379,10 @@ console.log("✅ Rüya RSS oluşturuldu");
 
 catch(error){
 
-console.error(error);
+console.error(
+"❌ HATA:",
+error
+);
 
 process.exit(1);
 
@@ -185,6 +390,7 @@ process.exit(1);
 
 
 }
+
 
 
 main();
