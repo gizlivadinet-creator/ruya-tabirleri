@@ -2,7 +2,7 @@ import fs from "fs";
 import * as cheerio from "cheerio";
 
 
-const USER_AGENT = "ruya-tabirleri-rss/1.0";
+const USER_AGENT = "ruya-yorumlari-rss/1.0";
 
 
 const SITE_URL =
@@ -14,17 +14,17 @@ const RSS_URL =
 
 
 
-function temizle(text=""){
+function temizle(text = "") {
 
 return text
-.replace(/\s+/g," ")
+.replace(/\s+/g, " ")
 .trim();
 
 }
 
 
 
-async function sayfaCek(url){
+async function sayfaCek(url) {
 
 const response = await fetch(url,{
 headers:{
@@ -48,7 +48,7 @@ return await response.text();
 
 
 
-async function ruyaListesi(){
+async function ruyaLinkleriAl(){
 
 
 const html =
@@ -59,50 +59,43 @@ const $ =
 cheerio.load(html);
 
 
-let liste=[];
+let liste = [];
 
 
 
 $("a").each((i,el)=>{
 
 
-let title =
+let baslik =
 temizle($(el).text());
 
 
-let href =
+let link =
 $(el).attr("href");
 
 
 
-if(!href) return;
+if(!baslik || !link){
+
+return;
+
+}
 
 
 
-if(
-title.length < 3
-) return;
+let kontrol =
+(baslik + " " + link).toLowerCase();
 
 
 
-// Menü ve gereksiz alanları çıkar
-
-const yasak=[
-
-"Künye",
-"İletişim",
-"Çerez",
-"Gizlilik",
-"Haber",
-"Galeri",
-"Video",
-"Fotoğraf"
-
-];
-
+// Sadece rüya içerikleri
 
 if(
-yasak.some(x=>title.includes(x))
+
+!kontrol.includes("ruya") &&
+
+!kontrol.includes("rüya")
+
 ){
 
 return;
@@ -111,30 +104,58 @@ return;
 
 
 
+
+// Yasaklar
+
+const yasaklar=[
+
+"kunye",
+"künye",
+"iletisim",
+"iletişim",
+"gizlilik",
+"çerez",
+"haber",
+"video",
+"galeri",
+"fotoğraf"
+
+];
+
+
+
 if(
-href.includes("ruya") ||
-href.includes("ruyada") ||
-href.includes("ruyasi")
+yasaklar.some(x =>
+kontrol.includes(x)
+)
 ){
 
-
-if(
-href.startsWith("/")
-){
-
-href =
-"https://www.diyadinnet.com"+href;
+return;
 
 }
 
 
+
+if(link.startsWith("/")){
+
+link =
+"https://www.diyadinnet.com"+link;
+
+}
+
+
+
+if(
+!liste.some(x=>x.url===link)
+){
+
 liste.push({
 
-title,
-url:href
+title:baslik,
+
+url:link
 
 });
-
 
 }
 
@@ -154,7 +175,9 @@ return liste;
 
 
 
-async function ruyaDetay(url){
+
+
+async function ruyaDetayCek(url){
 
 
 try{
@@ -180,8 +203,6 @@ let image="";
 
 
 
-// İlk görsel
-
 $("img").each((i,el)=>{
 
 
@@ -204,9 +225,9 @@ src="https:"+src;
 }
 
 
-else if(src.startsWith("/")){
+if(src.startsWith("/")){
 
-src=
+src =
 "https://www.diyadinnet.com"+src;
 
 }
@@ -214,12 +235,10 @@ src=
 
 image=src;
 
-
 }
 
 
 }
-
 
 });
 
@@ -232,9 +251,7 @@ let content="";
 
 
 
-// Tam içerik alanları
-
-$("article, .content, .entry-content, .detail, main")
+$("article, main, .content, .detail, .entry-content")
 .each((i,el)=>{
 
 
@@ -253,35 +270,23 @@ temizle(content);
 
 
 
-
 let video="";
 
 
 
-// Video bul
-
-$("video source, iframe")
+$("iframe, video source")
 .each((i,el)=>{
 
 
 if(!video){
 
-
-let src =
-$(el).attr("src");
-
-
-if(src){
-
-video=src;
+video =
+$(el).attr("src") || "";
 
 }
-
-
-}
-
 
 });
+
 
 
 
@@ -290,7 +295,7 @@ video=src;
 return {
 
 title:
-title || "Rüya Tabiri",
+title || "Rüya Yorumu",
 
 content,
 
@@ -300,28 +305,25 @@ video,
 
 url
 
-
 };
 
 
 
 }
 
-catch(error){
-
-
-console.log(
-"Detay alınamadı:",
-url
-);
+catch{
 
 
 return {
 
 title:"",
+
 content:"",
+
 image:"",
+
 video:"",
+
 url
 
 };
@@ -331,6 +333,8 @@ url
 
 
 }
+
+
 
 
 
@@ -350,7 +354,7 @@ new Date();
 
 
 const liste =
-await ruyaListesi();
+await ruyaLinkleriAl();
 
 
 
@@ -362,7 +366,7 @@ for(const item of liste){
 
 
 const detay =
-await ruyaDetay(item.url);
+await ruyaDetayCek(item.url);
 
 
 
@@ -374,11 +378,11 @@ continue;
 
 
 
-let aciklama = "";
+let aciklama="";
 
 
 
-// Görsel başa
+// Görsel başta
 
 if(detay.image){
 
@@ -392,14 +396,14 @@ aciklama +=
 
 // Tam içerik
 
-aciklama += detay.content;
+aciklama +=
+detay.content;
 
 
 
-// Video sona
+// Video sonda
 
 if(detay.video){
-
 
 aciklama +=
 
@@ -407,15 +411,17 @@ aciklama +=
 
 <br/><br/>
 
-<video controls>
+Video:
 
-<source src="${detay.video}">
-
-</video>
+<a href="${detay.video}">
+İzle
+</a>
 
 `;
 
 }
+
+
 
 
 
@@ -437,20 +443,26 @@ ${aciklama}
 
 
 
+<content:encoded><![CDATA[
+${aciklama}
+]]></content:encoded>
+
+
+
 <link>
 ${detay.url}
 </link>
 
 
 
-<guid>
+<guid isPermaLink="true">
 ${detay.url}
 </guid>
 
 
 
 <category>
-Rüya Tabirleri
+Rüya Yorumları
 </category>
 
 
@@ -467,9 +479,7 @@ ${now.toUTCString()}
 
 
 
-${detay.image ?
-
-`
+${detay.image ? `
 
 <media:content
 
@@ -477,9 +487,7 @@ url="${detay.image}"
 
 medium="image"/>
 
-`
-
-:""}
+`:""}
 
 
 
@@ -490,6 +498,7 @@ medium="image"/>
 
 
 }
+
 
 
 
@@ -514,9 +523,11 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
 
 
+
 <title>
-Diyadinnet Rüya Tabirleri
+Diyadinnet Rüya Yorumları
 </title>
+
 
 
 <link>
@@ -524,20 +535,17 @@ ${SITE_URL}
 </link>
 
 
+
 <description>
-Güncel rüya tabirleri ve anlamları
+Diyadinnet kaynaklı rüya yorumları
 </description>
+
 
 
 <language>
 tr-TR
 </language>
 
-
-<atom:link
-href="${RSS_URL}"
-rel="self"
-type="application/rss+xml"/>
 
 
 <lastBuildDate>
@@ -552,8 +560,8 @@ ${items}
 
 </channel>
 
-</rss>`;
 
+</rss>`;
 
 
 
@@ -575,13 +583,14 @@ rss,
 
 console.log(
 
-`✅ RSS oluşturuldu. ${liste.length} rüya bulundu`
+`✅ RSS hazır. ${liste.length} rüya bulundu`
 
 );
 
 
 
 }
+
 
 
 catch(error){
@@ -595,11 +604,11 @@ error
 
 process.exit(1);
 
-
 }
 
 
 }
+
 
 
 
