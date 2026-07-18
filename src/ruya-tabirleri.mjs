@@ -222,26 +222,17 @@ $("h1").first().text()
 
 
 
-// Görsel al - Logo hariç (ilk sırada)
+// Görsel al - /d/ruya/ dizinindeki görseller
 let image = "";
 
 $("img").each((i, imgEl) => {
   const src = $(imgEl).attr("src") || "";
-  const alt = $(imgEl).attr("alt") || "";
+  const dataSrc = $(imgEl).attr("data-src") || "";
   
-  // Logo dosyalarını ve sayfayı şekillendiren resimleri atla
-  if(
-    !src.includes("logo") &&
-    !src.includes("icon") &&
-    !src.includes("banner") &&
-    !src.includes("header") &&
-    !src.includes("footer") &&
-    !src.includes("ad") &&
-    !src.includes("/d/") &&
-    !src.includes("/img/") &&
-    src.length > 0
-  ){
-    image = src;
+  // /d/ruya/ dizinindeki görselleri seç
+  if(src.includes("/d/ruya/") || dataSrc.includes("/d/ruya/")){
+    image = src || dataSrc;
+    
     if(!image.startsWith("http")){
       if(image.startsWith("/")){
         image = "https://www.diyadinnet.com" + image;
