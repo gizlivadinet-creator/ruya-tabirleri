@@ -222,17 +222,34 @@ $("h1").first().text()
 
 
 
-// Görsel al (ilk sırada)
+// Görsel al - Logo hariç (ilk sırada)
 let image = "";
-const imgTag = $("img").first();
-if(imgTag.length){
-image = imgTag.attr("src") || "";
-if(image && !image.startsWith("http")){
-  if(image.startsWith("/")){
-    image = "https://www.diyadinnet.com" + image;
+
+$("img").each((i, imgEl) => {
+  const src = $(imgEl).attr("src") || "";
+  const alt = $(imgEl).attr("alt") || "";
+  
+  // Logo dosyalarını ve sayfayı şekillendiren resimleri atla
+  if(
+    !src.includes("logo") &&
+    !src.includes("icon") &&
+    !src.includes("banner") &&
+    !src.includes("header") &&
+    !src.includes("footer") &&
+    !src.includes("ad") &&
+    !src.includes("/d/") &&
+    !src.includes("/img/") &&
+    src.length > 0
+  ){
+    image = src;
+    if(!image.startsWith("http")){
+      if(image.startsWith("/")){
+        image = "https://www.diyadinnet.com" + image;
+      }
+    }
+    return false; // break
   }
-}
-}
+});
 
 
 
