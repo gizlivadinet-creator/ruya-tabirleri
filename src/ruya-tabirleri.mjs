@@ -10,7 +10,7 @@ const ANA_URL =
 
 
 const RSS_URL =
-"https://gizlivadinet-creator.github.io/tarihte-bugun/ruya-tabirleri.xml";
+"https://gizlivadinet-creator.github.io/ruya-tabirleri.xml";
 
 
 
