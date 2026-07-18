@@ -44,6 +44,20 @@ return text
 
 
 
+function htmlTemizle(html=""){
+
+// Script ve style etiketlerini kaldır
+html = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "");
+html = html.replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, "");
+
+// Gereksiz boşlukları sil
+html = html.replace(/\s+/g, " ").trim();
+
+return html;
+
+}
+
+
 
 async function ruyaLinkleriAl(){
 
@@ -135,6 +149,55 @@ return links;
 
 
 
+function extraHTML(html){
+
+let content = "";
+
+// h2 ve p kombinasyonları
+const sections = html.match(/(<h2.*?<\/h2>.*?(?=<h2|<h3|<video|$))/gis) || [];
+
+sections.forEach(section => {
+  const h2Match = section.match(/<h2[^>]*>(.*?)<\/h2>/is);
+  if(h2Match){
+    content += `<h2>${h2Match[1]}</h2>`;
+  }
+  
+  const paragraphs = section.match(/<p[^>]*>(.*?)<\/p>/gis) || [];
+  paragraphs.forEach(p => {
+    content += p;
+  });
+});
+
+// Eğer h2 yoksa, sadece h3 ve p kombinasyonları
+if(!content){
+  const h3Sections = html.match(/(<h3.*?<\/h3>.*?(?=<h3|<video|$))/gis) || [];
+  
+  h3Sections.forEach(section => {
+    const h3Match = section.match(/<h3[^>]*>(.*?)<\/h3>/is);
+    if(h3Match){
+      content += `<h3>${h3Match[1]}</h3>`;
+    }
+    
+    const paragraphs = section.match(/<p[^>]*>(.*?)<\/p>/gis) || [];
+    paragraphs.forEach(p => {
+      content += p;
+    });
+  });
+}
+
+// Eğer yine yoksa, en azından p etiketlerini al
+if(!content){
+  const paragraphs = html.match(/<p[^>]*>(.*?)<\/p>/gis) || [];
+  paragraphs.forEach(p => {
+    content += p;
+  });
+}
+
+return temizle(content.replace(/<[^>]+>/g, ""));
+
+}
+
+
 
 async function ruyaDetayCek(url){
 
@@ -145,9 +208,10 @@ try{
 const html =
 await sayfaCek(url);
 
+const htmlTemiz = htmlTemizle(html);
 
 const $ =
-cheerio.load(html);
+cheerio.load(htmlTemiz);
 
 
 
@@ -158,25 +222,112 @@ $("h1").first().text()
 
 
 
+// Görsel al (ilk sırada)
+let image = "";
+const imgTag = $("img").first();
+if(imgTag.length){
+image = imgTag.attr("src") || "";
+if(image && !image.startsWith("http")){
+  if(image.startsWith("/")){
+    image = "https://www.diyadinnet.com" + image;
+  }
+}
+}
+
+
+
+// Ana içerik (h2, p, h3 kombinasyonları)
 let content="";
 
+$("article, .content, .entry-content, .detail, main, .post, .post-content").each((i,el)=>{
 
+const sectionHtml = $(el).html() || "";
 
-$("article, .content, .entry-content, .detail").each((i,el)=>{
+// h2 ve p kombinasyonları
+const h2Sections = sectionHtml.match(/(<h2[^>]*>.*?<\/h2>.*?(?=<h2|<h3|<video|$))/gis) || [];
 
+if(h2Sections.length > 0){
+  h2Sections.forEach(section => {
+    const parsed = cheerio.load(section);
+    const h2Text = temizle(parsed("h2").text());
+    
+    if(h2Text){
+      content += `<h2>${h2Text}</h2>\n`;
+    }
+    
+    const pTexts = [];
+    parsed("p").each((_, pEl) => {
+      const pText = temizle(parsed(pEl).text());
+      if(pText && pText.length > 5){
+        pTexts.push(`<p>${pText}</p>`);
+      }
+    });
+    
+    content += pTexts.join("\n");
+  });
+}
 
-content +=
-" "+
-$(el).text();
+// Eğer h2 yoksa h3 ve p kombinasyonları
+if(!h2Sections.length){
+  const h3Sections = sectionHtml.match(/(<h3[^>]*>.*?<\/h3>.*?(?=<h3|<video|$))/gis) || [];
+  
+  h3Sections.forEach(section => {
+    const parsed = cheerio.load(section);
+    const h3Text = temizle(parsed("h3").text());
+    
+    if(h3Text){
+      content += `<h3>${h3Text}</h3>\n`;
+    }
+    
+    const pTexts = [];
+    parsed("p").each((_, pEl) => {
+      const pText = temizle(parsed(pEl).text());
+      if(pText && pText.length > 5){
+        pTexts.push(`<p>${pText}</p>`);
+      }
+    });
+    
+    content += pTexts.join("\n");
+  });
+}
 
-
+// Eğer yine yoksa sadece p etiketleri
+if(!h2Sections.length && !sectionHtml.includes("<h3")){
+  const parsed = cheerio.load(sectionHtml);
+  const pTexts = [];
+  
+  parsed("p").each((_, pEl) => {
+    const pText = temizle(parsed(pEl).text());
+    if(pText && pText.length > 5){
+      pTexts.push(`<p>${pText}</p>`);
+    }
+  });
+  
+  content += pTexts.join("\n");
+}
 
 });
 
 
 
-content =
-temizle(content);
+// Video (varsa en sonda)
+let video = "";
+const videoTag = $("video").first();
+if(videoTag.length){
+  const srcTag = videoTag.find("source").first();
+  if(srcTag.length){
+    video = srcTag.attr("src") || "";
+    if(video && !video.startsWith("http")){
+      if(video.startsWith("/")){
+        video = "https://www.diyadinnet.com" + video;
+      }
+    }
+  }
+}
+
+
+
+content = temizle(content);
 
 
 
@@ -185,8 +336,25 @@ if(!content){
 content =
 temizle(
 $("body").text()
-);
+).substring(0, 500);
 
+}
+
+
+
+// Final HTML yapısı
+let finalContent = "";
+
+if(image){
+finalContent += `<img src="${image}" alt="${title}" />\n\n`;
+}
+
+if(content){
+finalContent += content;
+}
+
+if(video){
+finalContent += `\n\n<video controls>\n<source src="${video}" />\n</video>`;
 }
 
 
@@ -196,7 +364,7 @@ return {
 title:
 title || "Rüya Tabiri",
 
-content,
+content: finalContent,
 url
 
 };
